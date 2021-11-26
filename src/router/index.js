@@ -13,19 +13,19 @@ const routes = [
     {
         path: '/section1',
         name: 'Section1',
-        component: () => import('../views/Section1.vue'),
+        component: () => import('../views/section1/Section1.vue'),
         meta: { title: 'Section1' }
     },
     {
         path: '/section2',
         name: 'Section2',
-        component: () => import('../views/Section2.vue'),
+        component: () => import('../views/section2/Section2.vue'),
         meta: { title: 'Section2' }
     },
     {
         path: '/section3',
         name: 'Section3',
-        component: () => import('../views/Section3.vue'),
+        component: () => import('../views/section3/Section3.vue'),
         meta: { title: 'Section3' }
     }
 ]
