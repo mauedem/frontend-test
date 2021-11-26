@@ -42,6 +42,7 @@
 
 <script>
 import FilteredTable from "@/components/FilteredTable";
+import { mapGetters } from "vuex";
 
 export default {
     name: "Block1",
@@ -50,73 +51,25 @@ export default {
         FilteredTable
     },
 
-    data: () => ({
-        fields: [
-            {
-                key: 'id',
-                label: 'Идентификатор'
-            },
-            {
-                key: 'selectValue',
-                label: 'Значение селекта'
-            },
-            {
-                key: 'text',
-                label: 'Текстовая информация'
-            }
-        ],
-
-        items: [
-            {
-                id: 1,
-                selectValue: 'значение 1',
-                text: 'пара слов'
-            },
-            {
-                id: 2,
-                selectValue: 'значение 2',
-                text: 'пара-тройка слов'
-            },
-            {
-                id: 3,
-                selectValue: 'значение 3',
-                text: 'информация'
-            },
-            {
-                id: 4,
-                selectValue: 'значение 4',
-                text: 'что-то еще'
-            },
-            {
-                id: 5,
-                selectValue: 'значение 5',
-                text: 'несколько слов'
-            },
-            {
-                id: 6,
-                selectValue: 'значение 6',
-                text: 'новое значение'
-            }
-        ]
-    }),
-
     computed: {
+        ...mapGetters(['items', 'filteredItems', 'fields']),
+
         selectedOption: {
-            get () {
+            get() {
                 return this.$store.getters['selectedOption']
             },
 
-            set (value) {
+            set(value) {
                 this.$store.dispatch('setSelectedOption', value)
             }
         },
 
         filterText: {
-            get () {
+            get() {
                 return this.$store.getters['filterText']
             },
 
-            set (value) {
+            set(value) {
                 this.$store.dispatch('setFilterText', value)
             }
         },
@@ -135,8 +88,10 @@ export default {
                 }
             }
 
+            this.$store.dispatch('setFilteredItems', result)
+
             return result
-        }
+        },
     },
 
     methods: {

@@ -7,6 +7,7 @@
 </template>
 
 <script>
+import { mapGetters } from "vuex";
 import Navigation from "@/components/Navigation";
 
 export default {
@@ -14,6 +15,14 @@ export default {
 
     components: {
         Navigation
+    },
+
+    computed: {
+        ...mapGetters(['items'])
+    },
+
+    created() {
+        this.$store.dispatch('setFilteredItems', [...this.items])
     }
 }
 </script>

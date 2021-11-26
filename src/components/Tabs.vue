@@ -105,16 +105,12 @@ export default {
     cursor: pointer;
 }
 
-.tabs__list-item--active {
-    border-bottom: 3px solid red;
-}
-
 .tabs__list-link {
     color: #999999;
 }
 
 .tabs__list-link--active {
-    color: #262626 !important;
+    color: #262626;
 }
 
 .tabs__list-link:hover {

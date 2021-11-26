@@ -36,6 +36,8 @@
             </div>
         </div>
 
+        <!-- Так как не указано, в текстовом поле из какого раздела
+        должен отображаться результат, отображаю его здесь -->
         <div class="submenu2__result">
             <span class="title">Результат:</span>
             <input
@@ -60,6 +62,7 @@ export default {
     computed: {
         ...mapGetters(['text']),
 
+        /* Как я поняла, поле ввода, расположенное на основном окна - это текстовая область из 1 раздела */
         getFirstOperand() {
             return Number(this.text)
         },
