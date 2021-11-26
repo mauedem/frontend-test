@@ -6,6 +6,7 @@
                 class="todo-list__input"
                 v-model="task"
                 type="text"
+                @keydown.enter="addTask"
             >
             <button @click="addTask">Добавить</button>
         </div>

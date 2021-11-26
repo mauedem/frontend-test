@@ -9,6 +9,7 @@
         </div>
 
         <FilteredTable
+            class="submenu3__table"
             :fields="fields"
             :items="filteredItems"
         />
@@ -33,7 +34,7 @@ export default {
 </script>
 
 <style scoped>
-.submenu3__text {
+.submenu3__text, .submenu3__table {
     margin: 30px 50px;
 }
 </style>

@@ -3,7 +3,6 @@ import VueRouter from 'vue-router'
 import Submenu1 from "@/views/section3/Submenu1";
 import Submenu2 from "@/views/section3/Submenu2";
 import Submenu3 from "@/views/section3/Submenu3";
-// import Section3 from "@/views/section3/Section3";
 
 Vue.use(VueRouter)
 
@@ -33,8 +32,6 @@ const routes = [
         meta: { title: 'Section3' },
         children: [
             {
-                // при совпадении пути с шаблоном /user/:id/profile
-                // в <router-view> компонента User будет показан UserProfile
                 path: '',
                 name: 'Submenu1',
                 component: Submenu1,
@@ -53,25 +50,7 @@ const routes = [
                 meta: { title: 'Section3' }
             }
         ]
-    },
-    // {
-    //     path: '/section3/submenu1',
-    //     name: 'Submenu1',
-    //     component: () => import('../views/section3/Submenu1.vue'),
-    //     meta: { title: 'Section3' },
-    // },
-    // {
-    //     path: '/section3/submenu2',
-    //     name: 'Submenu2',
-    //     component: () => import('../views/section3/Submenu2.vue'),
-    //     meta: { title: 'Section3' },
-    // },
-    // {
-    //     path: '/section3/submenu3',
-    //     name: 'Submenu2',
-    //     component: () => import('../views/section3/Submenu3.vue'),
-    //     meta: { title: 'Section3' },
-    // }
+    }
 ]
 
 const router = new VueRouter({
