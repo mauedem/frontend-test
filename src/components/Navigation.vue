@@ -9,7 +9,7 @@
                 <router-link
                     :to="{ name: item.name }"
                     class="navbar__link"
-                    :class="{'navbar__link--active': activeItem === item.name}"
+                    :class="{ 'navbar__link--active': activeItem.includes(item.path) }"
                 >
                     {{ item.title }}
                 </router-link>
@@ -26,22 +26,25 @@ export default {
         navItems: [
             {
                 title: 'Раздел 1',
-                name: 'Section1'
+                name: 'Section1',
+                path: 'section1'
             },
             {
                 title: 'Раздел 2',
-                name: 'Section2'
+                name: 'Section2',
+                path: 'section2'
             },
             {
                 title: 'Раздел 3',
-                name: 'Section3'
+                name: 'Submenu1',
+                path: 'section3'
             }
         ]
     }),
 
     computed: {
         activeItem () {
-            return this.$route.name;
+            return this.$route.path;
         }
     },
 }

@@ -111,8 +111,7 @@ export default {
 
         saveTask(index) {
             const tasks = [...this.todoTasks]
-            console.log('tasks[index].description = ',tasks[index].description)
-            console.log('this.editedTask = ', this.editedTask)
+
             tasks[index].description = this.editedTask
             tasks[index].editMode = false
 

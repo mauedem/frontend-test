@@ -2,9 +2,7 @@
     <div id="app">
         <Navigation />
 
-        <main>
-            <router-view />
-        </main>
+        <router-view />
     </div>
 </template>
 
@@ -32,6 +30,8 @@ export default {
 
 body {
     font-family: 'Segoe UI', sans-serif;
+    height: 100vh;
+    overflow: hidden;
 }
 
 .btn {
