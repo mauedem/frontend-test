@@ -1,7 +1,7 @@
 <template>
     <section class="section1">
         <div class="section1__btn-group">
-            <div class="section1__title">Цвет:</div>
+            <div class="title">Цвет:</div>
 
             <div class="section1__buttons btn-group" role="group">
                 <div>
@@ -64,7 +64,7 @@
         </div>
 
         <div class="section1__textfield">
-            <div class="section1__title">Тестовая область:</div>
+            <div class="title">Тестовая область:</div>
 
             <textarea
                 v-model="text"
@@ -113,10 +113,6 @@ export default {
 .section1__btn-group {
     display: flex;
     align-items: center;
-}
-
-.section1__title {
-    font-weight: 600;
 }
 
 .section1__textarea {

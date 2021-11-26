@@ -5,13 +5,21 @@ Vue.use(Vuex)
 
 export default new Vuex.Store({
     state: {
-        selectedColor: 'red', // Выбранный цвет в разделе 1
-        text: '', // Текстовое содержимое раздела 1
+        /* Раздел 1 */
+        selectedColor: 'red', // Выбранный цвет
+        text: '', // Текстовое содержимое
+
+        /* Раздел 2 */
+        selectedOption: '', // Выбранная опция селекта
+        filterText: '' // Фильтрующий текст
     },
 
     getters: {
         selectedColor: s => s.selectedColor,
-        text: s => s.text
+        text: s => s.text,
+
+        selectedOption: s => s.selectedOption,
+        filterText: s => s.filterText
     },
 
     actions: {
@@ -21,6 +29,14 @@ export default new Vuex.Store({
 
         setText({ commit }, payload) {
             commit('SET_TEXT', payload)
+        },
+
+        setSelectedOption({ commit }, payload) {
+            commit('SET_SELECTED_OPTION', payload)
+        },
+
+        setFilterText({ commit }, payload) {
+            commit('SET_FILTER_TEXT', payload)
         }
     },
 
@@ -31,6 +47,14 @@ export default new Vuex.Store({
 
         SET_TEXT(state, payload) {
             state.text = payload
-        }
+        },
+
+        SET_SELECTED_OPTION(state, payload) {
+            state.selectedOption = payload
+        },
+
+        SET_FILTER_TEXT(state, payload) {
+            state.filterText = payload
+        },
     }
 })

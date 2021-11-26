@@ -39,4 +39,8 @@ body {
     border: 1px solid transparent;
     cursor: pointer;
 }
+
+.title {
+    font-weight: 600;
+}
 </style>
