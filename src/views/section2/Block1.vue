@@ -94,7 +94,7 @@ export default {
             },
             {
                 id: 6,
-                selectValue: 'начение 6',
+                selectValue: 'значение 6',
                 text: 'новое значение'
             }
         ]

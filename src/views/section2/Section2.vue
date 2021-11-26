@@ -40,7 +40,7 @@ export default {
                 active: false
             },
             {
-                title: 'Блок 2',
+                title: 'Блок 3',
                 tab: 'block3',
                 active: false
             },
