@@ -1,6 +1,6 @@
 <template>
     <div class="submenu1">
-        <div class="submenu1__header title">Подменю1</div>
+        <div class="submenu__header title">Подменю 1</div>
 
         <div class="submenu1__selected-option">
             <div class="title">Результат выбора селектора: </div>
@@ -43,12 +43,6 @@ export default {
 </script>
 
 <style scoped>
-.submenu1__header {
-    display: flex;
-    justify-content: center;
-    margin-top: 40px;
-}
-
 .submenu1__selected-option {
     margin: 50px
 }

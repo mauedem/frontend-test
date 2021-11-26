@@ -7,7 +7,7 @@
                 class="navbar__nav"
             >
                 <router-link
-                    :to="{ name: item.name }"
+                    :to="{ name: item.name, params: { num: getRouteParam } }"
                     class="navbar__link"
                     :class="{ 'navbar__link--active': activeItem.includes(item.path) }"
                 >
@@ -45,6 +45,10 @@ export default {
     computed: {
         activeItem () {
             return this.$route.path;
+        },
+
+        getRouteParam() {
+            return this.$route.params.num ?? 1
         }
     },
 }

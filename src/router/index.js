@@ -27,7 +27,7 @@ const routes = [
         meta: { title: 'Section2' }
     },
     {
-        path: '/section3',
+        path: '/section3/:num',
         name: 'Section3',
         component: () => import('../views/section3/Section3.vue'),
         meta: { title: 'Section3' },

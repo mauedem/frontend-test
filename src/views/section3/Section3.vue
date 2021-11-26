@@ -20,7 +20,7 @@ export default {
 }
 </script>
 
-<style scoped>
+<style>
 .section3 {
     height: 100%;
     width: 100%;
@@ -28,7 +28,12 @@ export default {
 }
 
 .submenu {
-    /*margin-left: 300px;*/
     width: 100%;
+}
+
+.submenu__header {
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
 }
 </style>
